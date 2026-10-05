@@ -1,0 +1,178 @@
+﻿<Window x:Class="pcdogagyakorlo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pcdogagyakorlo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="850" Width="400">
+    <Grid>
+        <StackPanel>
+
+            <TextBlock
+                Text="Gamer Pc rendelő"
+                FontSize="20"
+                FontWeight="Bold"
+                Margin="0,15,0,0"
+                HorizontalAlignment="Center"/>
+
+            <TextBlock
+                Text="Név:"
+                FontWeight="bold"
+                FontSize="14"
+                Margin="0,25,0,10"/>
+            <TextBox x:Name="textNev"
+                FontSize="14"
+                Width="170"
+                HorizontalAlignment="Left"/>
+
+            <TextBlock
+                Text="Életkor:"
+                FontWeight="Bold"
+                FontSize="14"
+                Margin="0,0,0,10"/>
+            <TextBox x:Name="textEletkor"
+                FontSize="14"
+                Width="170"
+                HorizontalAlignment="Left"/>
+
+            <TextBlock
+                Text="E-mail:"
+                FontWeight="Bold"
+                FontSize="14"
+                Margin="0,0,0,10"/>
+            <TextBox x:Name="textEmail"
+                FontSize="14"
+                Width="170"
+                HorizontalAlignment="Left"/>
+
+            <TextBlock
+                Text="Processzor"
+                FontWeight="Bold"
+                FontSize="14"
+                Margin="0,15,0,0"/>
+            <ComboBox x:Name="comboProci"
+                Margin="0,5,0,10"
+                FontSize="14"
+                Width="170"
+                HorizontalAlignment="Left">
+                <ComboBoxItem Content="Intel Core i5 – 70 000 Ft"/>
+                <ComboBoxItem Content="Intel Core i7 – 110 000 Ft"/>
+                <ComboBoxItem Content="AMD Ryzen 5 – 65 000 Ft"/>
+                <ComboBoxItem Content="AMD Ryzen 7 – 105 000 Ft"/>
+            </ComboBox>
+
+            <TextBlock
+                Text="Videókártya"
+                FontWeight="Bold"
+                FontSize="14"
+                Margin="0,15,0,0"/>
+            <RadioButton x:Name="radioRtx4060"
+                Content="RTX 4060 – 130 000 Ft"
+                FontSize="14"
+                Margin="0,5,0,0"
+                GroupName="videoKartya"/>
+            <RadioButton x:Name="radioRtx4070"
+                Content="RTX 4070 – 220 000 Ft"
+                FontSize="14"
+                Margin="0,5,0,0"
+                GroupName="videoKartya"/>
+            <RadioButton x:Name="radioRtx4080"
+                Content="RTX 4080 – 400 000 Ft"
+                FontSize="14"
+                Margin="0,5,0,0"
+                GroupName="videoKartya"/>
+
+            <TextBlock
+                Text="Memória"
+                FontWeight="Bold"
+                FontSize="14"
+                Margin="0,15,0,0"/>
+            <RadioButton x:Name="radio16gb"
+                Content="16 GB – 20 000 Ft"
+                FontSize="14"
+                Margin="0,5,0,0"
+                GroupName="ram"/>
+            <RadioButton x:Name="radio32gb"
+                Content="32 GB – 35 000 Ft"
+                FontSize="14"
+                Margin="0,5,0,0"
+                GroupName="ram"/>
+            <RadioButton x:Name="radio64gb"
+                Content="64 GB – 65 000 Ft"
+                FontSize="14"
+                Margin="0,5,0,0"
+                GroupName="ram"/>
+
+            <TextBlock
+                Text="Hány darabot szeretne (1-5)"
+                FontWeight="Bold"
+                FontSize="14"
+                Margin="0,15,0,10"/>
+            <TextBox x:Name="textDarab"
+                FontSize="14"
+                Width="170"
+                HorizontalAlignment="Left"/>
+
+
+            <TextBlock
+                Text="Extrák"
+                FontWeight="Bold"
+                FontSize="14"
+                Margin="0,15,0,0"/>
+            <CheckBox x:Name="checkRgb"
+                Content="RGB világítás – +15 000 Ft"
+                FontSize="14"
+                Margin="0,5,0,0"/>
+            <CheckBox x:Name="checkWin11"
+                Content="Windows 11 – +45 000 Ft"
+                FontSize="14"
+                Margin="0,5,0,0"/>
+            <CheckBox x:Name="checkBillentyuzet"
+                Content="Gamer billentyűzet – +25 000 Ft"
+                FontSize="14"
+                Margin="0,5,0,0"/>
+            <CheckBox x:Name="checkEger"
+                Content="Gamer egér – +18 000 Ft"
+                FontSize="14"
+                Margin="0,5,0,0"/>
+
+
+            <TextBlock
+                Text="Garancia"
+                FontWeight="Bold"
+                FontSize="14"
+                Margin="0,15,0,0"/>
+            <ComboBox x:Name="comboGarancia"
+                Margin="0,5,0,10"
+                FontSize="14"
+                Width="170"
+                HorizontalAlignment="Left">
+                <ComboBoxItem Content="Alap 1 év – 0"/>
+                <ComboBoxItem Content="3 év garancia – +30 000 Ft"/>
+                <ComboBoxItem Content="5 év garancia – +60 000 Ft"/>
+            </ComboBox>
+
+            <CheckBox x:Name="checkFeltetel"
+                Content="Elfogadom a vásárlási feltételeket"
+                FontSize="14"
+                Margin="0,5,0,0"/>
+
+
+            <Button x:Name="buttonVasarlas"
+                Content="Vásárlás"
+                Margin="0,10,0,10"
+                FontSize="14"
+                Width="170"
+                Padding="10"
+                HorizontalAlignment="Center"
+                Click="VetelValidacio"/>
+
+
+
+
+
+
+        </StackPanel>
+    </Grid>
+</Window>
