@@ -72,7 +72,7 @@ namespace pcdogagyakorlo
                     } else
                     {
                         stringProciNev = stringProciLista[0];
-                        string intProciArSeged = stringProciLista[1].Replace(" Ft", "");
+                        string intProciArSeged = stringProciLista[1].Replace(" Ft", "").Replace(" ", "");
                         intProciAr = Convert.ToInt32(intProciArSeged);
                     }
                 } else
@@ -196,7 +196,7 @@ namespace pcdogagyakorlo
                     else
                     {
                         stringGarancia = stringGaranciaLista[0];
-                        string intArSeged = stringGaranciaLista[1].Replace(" Ft", "");
+                        string intArSeged = stringGaranciaLista[1].Replace(" Ft", "").Replace(" ", "");
                         intGarancia = Convert.ToInt32(intArSeged);
                     }
                 } else
@@ -214,12 +214,12 @@ namespace pcdogagyakorlo
                     MessageBox.Show($"A rendelésben a következő helyeken hibá(ka)t találtunk:\n\n{hibak}", "Rendelési hiba", MessageBoxButton.OK, MessageBoxImage.Error);
                 } else
                 {
-                    int ossz = (intProciAr + intKartyaAr + intRamAr + intExtrak + intGarancia) * intDarab;
+                    double ossz = (intProciAr + intKartyaAr + intRamAr + intExtrak + intGarancia) * intDarab;
                     if (ossz > 500000)
                     {
-                        ossz == ossz*0.95
+                        ossz = ossz * 0.95;
                     }
-                    MessageBox.Show()
+                    MessageBox.Show($"Sikeres rendelés!\n\nNév: {stringNev}\nE-mail: {stringEmail}\nProcesszor: {stringProciNev}\nVideókártya: {stringKartyaNev}\nMemória: {stringRamNev}\nDarabszám: {intDarab}\nExtrák: {stringExtrak}\nGarancia:{stringGarancia}\n\nFizetendő: {ossz} Ft\nRendelési azonosító: {r.Next(10000,99999)}", "Sikeres rendelés!", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
 
 

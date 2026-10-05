@@ -98,6 +98,7 @@
                 FontSize="14"
                 Margin="0,5,0,0"
                 GroupName="ram"/>
+            
             <RadioButton x:Name="radio64gb"
                 Content="64 GB – 65 000 Ft"
                 FontSize="14"
